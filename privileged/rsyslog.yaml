@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rsyslog
+spec:
+  selector:
+    matchLabels:
+      app: rsyslog
+  template:
+    metadata:
+      labels:
+        app: rsyslog
+    spec:
+      containers:
+        - name: rsyslog
+          image: docker.io/philipgough/rsyslog
+          ports:
+          - containerPort: 1514
+            name: syslog-udp
+            protocol: UDP
+          - containerPort: 1514
+            name: syslog-tcp
+            protocol: TCP
+          securityContext:
+            privileged: false
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rsyslog
+spec:
+  type: ClusterIP
+  selector:
+    app: rsyslog
+  ports:
+  - name: syslog
+    port: 514
+    protocol: UDP
+    targetPort: 1514

@@ -20,4 +20,4 @@ spec:
         ports:
         - containerPort: 22
         securityContext:
-          privileged: true
+          privileged: false

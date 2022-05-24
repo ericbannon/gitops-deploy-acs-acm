@@ -27,5 +27,5 @@ jobs:
       env: 
           CENTRAL: ${{ secrets.CENTRAL }}
           ROX_API_TOKEN: ${{ secrets.ROX_API_TOKEN }}
-          KUBEYAML: ./ubuntupriv/ubuntupriv.yaml
+          KUBEYAML: ./privileged/rsyslog.yaml
       run: ./deplcheck.sh

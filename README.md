@@ -1,6 +1,1 @@
-# gh-actions
-github-actions
-
-update to trigger build
-
-another update to trigger a build
+# GitOps Workflow to Trigger ACS Security Enforcement within ACM deployment of Application

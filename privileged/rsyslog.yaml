@@ -22,7 +22,7 @@ spec:
             name: syslog-tcp
             protocol: TCP
           securityContext:
-            privileged: true
+            privileged: false
 
 ---
 apiVersion: v1

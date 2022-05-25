@@ -3,7 +3,7 @@ Demo with a Git based application in ACM along with an ACS GitHub action on the 
 
 When changing the yaml from privileged:false to true in the git repo, we observe the GH CI check for build warning from ACS, and then watch it be prevented from being pushed into the dev environment automatically through ACM’s application.
 
-[[Watch the Demo Video](https://www.youtube.com/watch?v=AwvtabrR0a4&t=3s)
+[Watch the Demo Video](https://www.youtube.com/watch?v=AwvtabrR0a4&t=3s)
 
 ## Prerequsities:
 1. Must have ACS deployed and ACM deployed within at least 1 cluster shared between the two. (i.e. [secured cluster services]) running as a managed cluster within ACM.

@@ -5,21 +5,22 @@ metadata:
   namespace: devops
   labels:
     app: log4shell-app
-    app.kubernetes.io/component: log4shell-app
-    app.kubernetes.io/instance: log4shell-app
+    app.kubernetes.io/component: log4j-app
+    app.kubernetes.io/instance: log4j-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      deployment: log4shell-app
+      deployment: log4j-app
   template:
     metadata:
       labels:
-        deployment: log4shell-app
+        deployment: log4j-app
     spec:
       containers:
         - name: log4shell-app
-          image: quay.io/smileyfritz/log4shell-app:latest
+         ### image: quay.io/smileyfritz/log4shell-app:latest (Switch to this in order to fail updated deploy)
+          image: imjety/log4j:log4j-ldap
           ports:
             - containerPort: 8080
               protocol: TCP

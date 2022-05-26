@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: spring-boot-k8s
-          # image: skander123/springboot:latest
-          image: srcporter/spring-boot
+          image: skander123/springboot:latest
+          ## image: srcporter/spring-boot
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

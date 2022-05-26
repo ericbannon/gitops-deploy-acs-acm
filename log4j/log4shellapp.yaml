@@ -19,8 +19,8 @@ spec:
     spec:
       containers:
         - name: log4shell-app
-         ### image: quay.io/smileyfritz/log4shell-app:latest (Switch to this in order to fail updated deploy)
-          image: imjety/log4j:log4j-ldap
+          image: quay.io/smileyfritz/log4shell-app:latest
+          ### image: imjety/log4j:log4j-ldap
           ports:
             - containerPort: 8080
               protocol: TCP

@@ -28,5 +28,5 @@ jobs:
           CENTRAL: ${{ secrets.CENTRAL }}
           ROX_API_TOKEN: ${{ secrets.ROX_API_TOKEN }}
           IMAGE: quay.io/smileyfritz/log4shell-app:latest
-          IMAGE2: srcporter/spring-boot
+          # IMAGE: srcporter/spring-boot
       run: ./imagecheck.sh

@@ -7,14 +7,3 @@ When changing the yaml from privileged:false to true in the git repo, we observe
 
 ## Prerequsities:
 1. Must have ACS deployed and ACM deployed within at least 1 cluster shared between the two. (i.e. secured cluster services running as a managed cluster within ACM).
-
-## Basic Instructions for Demo
-
-1. Clone the repo
-2. Inside ACS, generate an API token and save this as a GitHub action secret called ROX_API_TOKEN
-3. Create a GitHub action secret for CENTRAL with the value of your Central route's address (no https:// or port)
-4. Configure an application tied to priveleged/rsyslog.yaml inside ACM with a placement policy to the shared cluster
-5. Enable the ACS Policy "Privliged Container" for 'Inform and Enforce' and click Save. 
-6. Update the rsyslog.yaml deployment with privileged: true (from false). 
-7. Examine GitHub Action CI Build for Failure 
-8. Review ACM Application subscription and search resource to illustrate blocked deployment for the updated yaml 
